@@ -11,7 +11,7 @@ Patch0:         %{name}-0.7-libprefix.patch
 BuildRequires:  pcsc-lite-devel
 BuildRequires:  help2man
 BuildRequires:  check
-BuildRequires:  python2-devel
+BuildRequires:  python3-devel
 BuildRequires:  gcc
 BuildRequires:  autoconf
 BuildRequires:  automake
@@ -43,7 +43,7 @@ make DESTDIR=%{buildroot} install
 %doc README
 %_bindir/vicc
 %_bindir/vpcd-config
-%{python2_sitelib}/%{name}/*
+%{python3_sitelib}/%{name}/*
 %{_mandir}/man1/vicc.1*
 %{_libdir}/pcsc/drivers/serial/libifdvpcd.so
 %{_libdir}/pcsc/drivers/serial/libifdvpcd.so.0.7
@@ -52,8 +52,9 @@ make DESTDIR=%{buildroot} install
 
 
 %changelog
-* Wed Mar 06 2019 Pierre-Louis Palant <ppalant@redhat.com> 0.7-1
+* Wed Mar 06 2019 Pierre-Louis Palant <ppalant@redhat.com> 0.7-2
 - Added Jakub Jelen's patch for the prefix problem
+- Changed dependency python2 to python3 as python2 is disabled in RHEL8
 
 * Tue Mar 05 2019 Pierre-Louis Palant <ppalant@redhat.com> 0.7-1
 - rebuilt

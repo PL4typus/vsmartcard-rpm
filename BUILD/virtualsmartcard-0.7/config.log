@@ -419,16 +419,18 @@ configure:13400: result: /usr/bin/sed
 configure:13417: checking for python
 configure:13450: result: no
 configure:13417: checking for python2
-configure:13435: found /usr/bin/python2
-configure:13447: result: /usr/bin/python2
+configure:13450: result: no
+configure:13417: checking for python3
+configure:13435: found /usr/bin/python3
+configure:13447: result: /usr/bin/python3
 configure:13468: checking for python version
-configure:13475: result: 2.7
+configure:13475: result: 3.6
 configure:13487: checking for python platform
-configure:13494: result: linux2
+configure:13494: result: linux
 configure:13520: checking for python script directory
-configure:13555: result: ${prefix}/lib/python2.7/site-packages
+configure:13555: result: ${prefix}/lib/python3.6/site-packages
 configure:13564: checking for python extension module directory
-configure:13599: result: ${exec_prefix}/lib64/python2.7/site-packages
+configure:13599: result: ${exec_prefix}/lib64/python3.6/site-packages
 configure:13626: checking for x86_64-redhat-linux-gnu-g++
 configure:13656: result: no
 configure:13626: checking for x86_64-redhat-linux-gnu-c++
@@ -690,7 +692,7 @@ configure: failed program was:
 configure:17651: result: no
 configure:17549: checking whether pthreads work without any flags
 configure:17642: gcc -o conftest -O2 -g -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fexceptions -fstack-protector-strong -grecord-gcc-switches -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1 -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection   -Wl,-z,relro  -Wl,-z,now -specs=/usr/lib/rpm/redhat/redhat-hardened-ld conftest.c   >&5
-/tmp/ccdgzsOm.o: In function `main':
+/tmp/ccIMqKMr.o: In function `main':
 /home/user/rpmbuild/BUILD/virtualsmartcard-0.7/conftest.c:30: undefined reference to `pthread_create'
 /home/user/rpmbuild/BUILD/virtualsmartcard-0.7/conftest.c:31: undefined reference to `pthread_join'
 collect2: error: ld returned 1 exit status
@@ -1021,7 +1023,7 @@ configure:18251: checking for qrencode.h
 configure:18251: result: no
 configure:18263: checking for QRcode_encodeString
 configure:18283: gcc -o conftest -O2 -g -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fexceptions -fstack-protector-strong -grecord-gcc-switches -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1 -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection   -I./src/opensc/src -Wl,-z,relro  -Wl,-z,now -specs=/usr/lib/rpm/redhat/redhat-hardened-ld conftest.c -Wl,-z,relro  -Wl,-z,now -specs=/usr/lib/rpm/redhat/redhat-hardened-ld  >&5
-/tmp/ccXqTrDI.o: In function `main':
+/tmp/ccVRFzkR.o: In function `main':
 /home/user/rpmbuild/BUILD/virtualsmartcard-0.7/conftest.c:38: undefined reference to `QRcode_encodeString'
 collect2: error: ld returned 1 exit status
 configure:18283: $? = 1
@@ -1399,7 +1401,7 @@ ac_cv_path_FGREP='/usr/bin/grep -F'
 ac_cv_path_GREP=/usr/bin/grep
 ac_cv_path_HELP2MAN=/usr/bin/help2man
 ac_cv_path_PKG_CONFIG=/usr/bin/x86_64-redhat-linux-gnu-pkg-config
-ac_cv_path_PYTHON=/usr/bin/python2
+ac_cv_path_PYTHON=/usr/bin/python3
 ac_cv_path_SED=/usr/bin/sed
 ac_cv_path_install='/usr/bin/install -c'
 ac_cv_path_lt_DD=/usr/bin/dd
@@ -1421,10 +1423,10 @@ am_cv_CC_dependencies_compiler_type=none
 am_cv_CXX_dependencies_compiler_type=none
 am_cv_make_support_nested_variables=yes
 am_cv_prog_cc_c_o=yes
-am_cv_python_platform=linux2
-am_cv_python_pyexecdir='${exec_prefix}/lib64/python2.7/site-packages'
-am_cv_python_pythondir='${prefix}/lib/python2.7/site-packages'
-am_cv_python_version=2.7
+am_cv_python_platform=linux
+am_cv_python_pyexecdir='${exec_prefix}/lib64/python3.6/site-packages'
+am_cv_python_pythondir='${prefix}/lib/python3.6/site-packages'
+am_cv_python_version=3.6
 ax_cv_PTHREAD_PRIO_INHERIT=yes
 lt_cv_ar_at_file=@
 lt_cv_archive_cmds_need_lc=no
@@ -1545,11 +1547,11 @@ PKG_CONFIG_PATH=':/usr/lib64/pkgconfig:/usr/share/pkgconfig'
 PTHREAD_CC='gcc'
 PTHREAD_CFLAGS='-pthread'
 PTHREAD_LIBS=''
-PYTHON='/usr/bin/python2'
+PYTHON='/usr/bin/python3'
 PYTHON_EXEC_PREFIX='${exec_prefix}'
-PYTHON_PLATFORM='linux2'
+PYTHON_PLATFORM='linux'
 PYTHON_PREFIX='${prefix}'
-PYTHON_VERSION='2.7'
+PYTHON_VERSION='3.6'
 QRENCODE_CFLAGS=''
 QRENCODE_LIBS=''
 RANLIB='ranlib'
@@ -1609,8 +1611,8 @@ pkgpythondir='${pythondir}/virtualsmartcard'
 prefix='/usr'
 program_transform_name='s&^&&'
 psdir='${docdir}'
-pyexecdir='${exec_prefix}/lib64/python2.7/site-packages'
-pythondir='${prefix}/lib/python2.7/site-packages'
+pyexecdir='${exec_prefix}/lib64/python3.6/site-packages'
+pythondir='${prefix}/lib/python3.6/site-packages'
 sbindir='/usr/sbin'
 serialconfdir='/etc/reader.conf.d'
 serialdropdir='/usr/lib64/pcsc/drivers/serial'
