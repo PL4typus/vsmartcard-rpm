@@ -1,6 +1,6 @@
-diff -up virtualsmartcard-0.7/configure.ac.prefix virtualsmartcard-0.7/configure.ac
---- virtualsmartcard-0.7/configure.ac.prefix	2014-09-07 14:50:04.000000000 +0200
-+++ virtualsmartcard-0.7/configure.ac	2019-01-29 14:19:21.809163614 +0100
+diff -up vsmartcard-c63cc40c34b44193c4cb8f9a97fb30c9680ebd0f/virtualsmartcard/configure.ac.prefix vsmartcard-c63cc40c34b44193c4cb8f9a97fb30c9680ebd0f/virtualsmartcard/configure.ac
+--- vsmartcard-c63cc40c34b44193c4cb8f9a97fb30c9680ebd0f/virtualsmartcard/configure.ac.prefix	2014-09-07 14:50:04.000000000 +0200
++++ vsmartcard-c63cc40c34b44193c4cb8f9a97fb30c9680ebd0f/virtualsmartcard/configure.ac	2019-01-29 14:19:21.809163614 +0100
 @@ -74,8 +74,8 @@ if test "${libpcsclite}" = no ; then
  				AC_MSG_ERROR([use --enable-serialdropdir=DIR])
  			fi

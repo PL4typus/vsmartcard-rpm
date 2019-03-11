@@ -1,0 +1,24 @@
+--- vsmartcard/virtualsmartcard/configure.ac	2019-03-11 13:00:37.366174628 +0100
++++ vsmartcard/virtualsmartcard/configure.ac.prefix	2019-03-11 13:01:08.756309752 +0100
+@@ -105,8 +105,8 @@ if test "${libpcsclite}" = no ; then
+ 				esac
+ 			fi
+ 		else
+-			serialdropdir="${prefix}`$PKG_CONFIG libpcsclite --variable=usbdropdir`/serial"
+-			if test "${serialdropdir}" = "${prefix}/serial" ; then
++			serialdropdir="`$PKG_CONFIG libpcsclite --variable=usbdropdir`/serial"
++			if test "${serialdropdir}" = "/serial" ; then
+ 				case "$host" in
+ 					*-*-darwin*) serialdropdir=${prefix}/usr/libexec/SmartCardServices/drivers/ifd-vpcd.bundle/Contents/MacOS; infoplist=yes ;;
+ 					*) AC_MSG_ERROR([use --enable-serialdropdir=DIR])
+@@ -131,8 +131,8 @@ if test "${libpcsclite}" = no ; then
+ 				esac
+ 			fi
+ 		else
+-			serialconfdir="${prefix}`$PKG_CONFIG libpcsclite --variable=serialconfdir`"
+-			if test "${serialconfdir}" = "${prefix}" ; then
++			serialconfdir="`$PKG_CONFIG libpcsclite --variable=serialconfdir`"
++			if test "${serialconfdir}" = "" ; then
+ 				case "$host" in
+ 					*-*-darwin*) serialconfdir=${prefix}/usr/libexec/SmartCardServices/drivers/ifd-vpcd.bundle/Contents; infoplist=yes ;;
+ 					*) serialconfdir="${prefix}/etc/reader.conf.d"
